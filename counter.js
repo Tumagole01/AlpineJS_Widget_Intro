@@ -1,11 +1,13 @@
-function Counter(){
-    return {
+document.addEventListener('alpine:init', function () {
+  Alpine.data('counter', function () {
+ return {
       count : 0,
-      increment(){
+      increment() {
         this.count++;
       },
       decrement(){
         this.count--;
-      }
+      }, 
     }
-}
+  })
+})
